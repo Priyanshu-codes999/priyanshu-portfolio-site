@@ -52,11 +52,13 @@
         <ul>
           <li><a href="#hero" class="active">Home</a></li>
           <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="assets/resume.pdf" target="_blank">Resume</a></li>
-          
-          </li>
+          <li><a href="#services">Skills</a></li>
+          <li><a href="experience.html">Experience</a></li>
+          <li><a href="assets/Priyanshu Agrawal resume.. 65 aATS.pdf" target="_blank">Resume</a></li>
           <li><a href="#contact">Contact</a></li>
+          <button id="theme-toggle" class="theme-btn">
+  🌙
+</button>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -104,7 +106,7 @@
 
             </h3>
             <p>I am a passionate and self-driven B.Tech Computer Science student at IILM University, Greater Noida.
-              Currently in my 2nd year, I am deeply focused on Data Structures & Algorithms, Python, and Java,
+             I am deeply focused on Data Structures & Algorithms, Python, and Java,
               with a strong interest in building efficient and scalable solutions.
             </p>
             <p>
@@ -115,7 +117,7 @@
             </p>
             </p>
             <p><strong>B.Tech CSE (Core)</strong> – IILM University, Greater Noida</p>
-            <p>2024 – 2028 | 2nd Year, 4th Semester</p>
+            <p>2024 – 2028 </p>
             <p>Focused on Data Structures, Programming, Web Development & Artificial Intelligence</p>
             <ul>
               <li><i class="bi bi-check2-all"></i> <span>LEARNING DATA STRUCTURE & ALGORITHMS DAILY.</span></li>
@@ -369,6 +371,19 @@
     </div>
   </div>
 </div>
+<div class="col-lg-4">
+  <div class="info-item d-flex align-items-center">
+    <i class="bi bi-instagram flex-shrink-0"></i>
+    <div>
+      <h3>Linkedin</h3>
+      <p>
+        <a href="https://www.linkedin.com/in/pri yanshu-agrawal-b83766357/" target="_blank">
+          linkedin.com/in/priyanshu-agrawal-b83766357
+        </a>
+      </p>
+    </div>
+  </div>
+</div>
 
             <div class="col-lg-4">
               <div class="info-item d-flex align-items-center">
@@ -389,6 +404,7 @@
                 </div>
               </div>
             </div><!-- End Info Item -->
+            
 
           </div>
         </div>
@@ -474,6 +490,27 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+const toggleBtn = document.getElementById("theme-toggle");
+
+toggleBtn.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+
+  if(document.body.classList.contains("dark-mode")){
+    localStorage.setItem("theme","dark");
+    toggleBtn.innerHTML="☀️";
+  }else{
+    localStorage.setItem("theme","light");
+    toggleBtn.innerHTML="🌙";
+  }
+});
+
+if(localStorage.getItem("theme")==="dark"){
+  document.body.classList.add("dark-mode");
+  toggleBtn.innerHTML="☀️";
+}
+</script>
 
 </body>
 
